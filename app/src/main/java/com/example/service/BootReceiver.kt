@@ -1,0 +1,23 @@
+package com.example.service
+
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.util.Log
+import com.example.HazardPulseApp
+
+class BootReceiver : BroadcastReceiver() {
+
+    override fun onReceive(context: Context, intent: Intent) {
+        if (intent.action == Intent.ACTION_BOOT_COMPLETED ||
+            intent.action == Intent.ACTION_MY_PACKAGE_REPLACED
+        ) {
+            Log.d("BootReceiver", "Re-registering hourly hazard checks after boot.")
+            val app = context.applicationContext as? HazardPulseApp
+            val isEnabled = app?.preferencesRepository?.hourlyMonitoringEnabled?.value ?: true
+            if (isEnabled) {
+                HourlyAlertScheduler.scheduleHourlyChecks(context)
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Shield Outline and Body -->
+    <path
+        android:pathData="M54,22 C68,22 79,27 80,39 C80,56 68,74 54,84 C40,74 28,56 28,39 C29,27 40,22 54,22 Z"
+        android:fillColor="#F97316" />
+    <path
+        android:pathData="M54,25 C66,25 76,29.5 77,40 C77,54.5 66,71 54,80 C42,71 31,54.5 31,40 C32,29.5 42,25 54,25 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="54"
+                android:startY="25"
+                android:endX="54"
+                android:endY="80"
+                android:type="linear">
+                <item android:color="#EF4444" android:offset="0.0" />
+                <item android:color="#DC2626" android:offset="0.5" />
+                <item android:color="#991B1B" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Weather & Haze Pulse / Lightning bolt inside Shield -->
+    <path
+        android:pathData="M56,32 L44,48 L52,48 L48,68 L64,49 L55,49 Z"
+        android:fillColor="#FEF08A" />
+    <!-- Alert Waves / Haze smoke wave arcs -->
+    <path
+        android:pathData="M42,71 C45,69 49,69 54,71 C58,72 62,71 66,69"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:strokeAlpha="0.9" />
+</vector>

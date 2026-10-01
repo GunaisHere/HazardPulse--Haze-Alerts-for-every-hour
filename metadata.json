@@ -1,0 +1,6 @@
+{
+  "name": "HazardPulse",
+  "description": "Critical GPS weather, haze, air quality, earthquake, and tsunami real-time alert system with hourly monitoring and custom voice warnings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
